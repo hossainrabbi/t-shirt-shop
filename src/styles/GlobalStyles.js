@@ -1,10 +1,16 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-
   :root {
     --black-color: #000000;
+    --light-color: #ffffff;
+    --light-gray: #f5f5f5;
+    --light-dark-gray: #cdcdcd;
+    --dark-light-gray: #8c8c8c;
+    --dark-gray: #404041;
+    --main-color: #f379a7;
+    --secondary-color: #95b3e0;
+    --transition: 0.3s;
   }
 
   *{

@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/common/Navbar';
+import AppBar from './components/common/AppBar';
 import Home from './pages/Home';
 import GlobalStyle from './styles/GlobalStyles';
 
 export default function App() {
   return (
     <Router>
-      <Navbar />
+      <AppBar />
       <Switch>
         <Route exact path="/" component={Home} />
       </Switch>

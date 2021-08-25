@@ -3,15 +3,22 @@ import { BiUser } from 'react-icons/bi';
 import { BsSearch } from 'react-icons/bs';
 import { FiHeart, FiShoppingBag } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { Button, Container, Flex, Grid } from '../../styles/GlobalStyles';
+import {
+  Logo,
+  Nav,
+  NavbarIconButton,
+  NavbarIconFlex,
+  Row,
+  Ul,
+} from '../../styles/common/Navbar.style';
+import { Container } from '../../styles/GlobalStyles';
 
 export default function Navbar() {
   return (
-    <AppBar>
+    <Nav>
       <Container>
         <Row>
-          <Logo className="logo">
+          <Logo>
             <img src="/assets/images/logo.png" alt="kidol" />
           </Logo>
           <Ul>
@@ -45,47 +52,12 @@ export default function Navbar() {
               <FiHeart />
             </NavbarIconButton>
             <NavbarIconButton>
+              <span>01</span>
               <FiShoppingBag />
             </NavbarIconButton>
           </NavbarIconFlex>
         </Row>
       </Container>
-    </AppBar>
+    </Nav>
   );
 }
-
-export const AppBar = styled.div`
-  background-color: #ddd;
-`;
-
-export const Row = styled(Grid)`
-  grid-template-columns: 2fr 5fr 2fr;
-  height: 69px;
-`;
-
-export const Logo = styled.div`
-  height: 40px;
-  align-self: center;
-`;
-
-export const Ul = styled.ul`
-  display: flex;
-  align-items: center;
-  li a {
-    color: var(--black-color);
-    text-transform: uppercase;
-    margin: 0 30px;
-    font-weight: 500;
-    font-size: 14px;
-  }
-`;
-
-export const NavbarIconFlex = styled(Flex)`
-  justify-content: flex-end;
-`;
-
-export const NavbarIconButton = styled(Button)`
-  font-size: 20px;
-  color: var(--black-color);
-  margin: 0 5px;
-`;
