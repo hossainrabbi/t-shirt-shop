@@ -36,7 +36,7 @@ export const NavbarIconFlex = styled(Flex)`
 
 export const NavbarIconButton = styled(Button)`
   font-size: 20px;
-  color: var(--black-color);
+  color: var(--dark-gray);
   margin: 0 5px;
   position: relative;
   display: none;

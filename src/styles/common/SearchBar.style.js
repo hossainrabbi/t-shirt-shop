@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Container, Flex, Grid } from '../../styles/GlobalStyles';
+import { Flex, Grid } from '../../styles/GlobalStyles';
 import { Logo, NavbarIconButton } from './Navbar.style';
 
-export const SearchBarContainer = styled(Container)`
+export const SearchBarArea = styled.div`
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid var(--light-gray);

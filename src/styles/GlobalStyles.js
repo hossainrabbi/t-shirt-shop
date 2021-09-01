@@ -13,24 +13,28 @@ const GlobalStyle = createGlobalStyle`
     --transition: 0.3s;
   }
 
-  *{
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
   }
 
-  img{
+  img {
     max-height: 100%;
   }
 
-  ul{
+  ul {
     list-style-type: none;
     padding: 0;
   }
 
-  a{
+  a {
     text-decoration: none;
+  }
+
+  section {
+    margin-top: 100px;
   }
 `;
 
@@ -49,6 +53,22 @@ export const Grid = styled.div`
 export const Flex = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const MainCartTitle = styled(Flex)`
+  justify-content: space-between;
+  margin-bottom: 20px;
+  h2 {
+    font-size: 30px;
+    color: var(--secondary-color);
+  }
+  a {
+    font-size: 14px;
+    color: var(--dark-gray);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export const Button = styled.button`
