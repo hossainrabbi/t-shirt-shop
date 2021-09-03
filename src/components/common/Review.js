@@ -1,35 +1,50 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import styled from 'styled-components';
+import { Flex } from '../../styles/GlobalStyles';
 
-export default function Review() {
-  const item = 3.5;
+export default function Review({ review, reviewQuantity }) {
   return (
-    <div style={{ marginTop: 10 }}>
-      {item >= 1 ? (
+    <ReviewFlex>
+      {review >= 1 ? (
         <FaStar style={{ color: '#f77c29' }} />
       ) : (
         <FaStar style={{ color: '#cccccc' }} />
       )}
-      {item >= 2 ? (
+      {review >= 2 ? (
         <FaStar style={{ color: '#f77c29' }} />
       ) : (
         <FaStar style={{ color: '#cccccc' }} />
       )}
-      {item >= 3 ? (
+      {review >= 3 ? (
         <FaStar style={{ color: '#f77c29' }} />
       ) : (
         <FaStar style={{ color: '#cccccc' }} />
       )}
-      {item >= 4 ? (
+      {review >= 4 ? (
         <FaStar style={{ color: '#f77c29' }} />
       ) : (
         <FaStar style={{ color: '#cccccc' }} />
       )}
-      {item >= 5 ? (
+      {review >= 5 ? (
         <FaStar style={{ color: '#f77c29' }} />
       ) : (
         <FaStar style={{ color: '#cccccc' }} />
-      )}
-    </div>
+      )}{' '}
+      <span>({reviewQuantity} Reviews)</span>
+    </ReviewFlex>
   );
 }
+
+export const ReviewFlex = styled(Flex)`
+  margin-top: 5px;
+  span {
+    font-size: 14px;
+    color: var(--light-dark-gray);
+    margin-left: 10px;
+    margin-top: 3px;
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+`;

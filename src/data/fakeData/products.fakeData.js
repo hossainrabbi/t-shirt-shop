@@ -2,10 +2,11 @@ const productData = [
   {
     _id: 1,
     title: 'Hentum Tosmois de Cras Tele Hamo Dincidunts',
-    review: 5,
-    reviewQuantity: 3,
+    review: 1,
+    reviewQuantity: 2,
     brand: 'Ella - Halothemes',
     price: 99,
+    off: 0,
     status: true,
     size: ['11"', '14"'],
     color: [
@@ -26,10 +27,11 @@ const productData = [
   {
     _id: 2,
     title: 'Hentum Tosmois de Cras Tele Hamo Dincidunts',
-    review: 5,
+    review: 2,
     reviewQuantity: 3,
     brand: 'Ella - Halothemes',
-    price: 99,
+    price: 100,
+    off: 0,
     status: true,
     size: ['11"', '14"'],
     color: [
@@ -50,10 +52,11 @@ const productData = [
   {
     _id: 3,
     title: 'Hentum Tosmois de Cras Tele Hamo Dincidunts',
-    review: 5,
+    review: 3,
     reviewQuantity: 3,
     brand: 'Ella - Halothemes',
     price: 99,
+    off: 3,
     status: true,
     size: ['11"', '14"'],
     color: [
@@ -78,7 +81,8 @@ const productData = [
     review: 5,
     reviewQuantity: 3,
     brand: 'Ella - Halothemes',
-    price: 99,
+    price: 96.35,
+    off: 6,
     status: true,
     size: ['11"', '14"'],
     color: [
@@ -99,7 +103,8 @@ const productData = [
     review: 5,
     reviewQuantity: 3,
     brand: 'Ella - Halothemes',
-    price: 99,
+    price: 69,
+    off: 3,
     status: true,
     size: ['11"', '14"'],
     color: [
@@ -121,6 +126,7 @@ const productData = [
     reviewQuantity: 3,
     brand: 'Ella - Halothemes',
     price: 99,
+    off: 1,
     status: true,
     size: ['11"', '14"'],
     color: [
@@ -141,7 +147,8 @@ const productData = [
     review: 5,
     reviewQuantity: 3,
     brand: 'Ella - Halothemes',
-    price: 99,
+    price: 92,
+    off: 0,
     status: true,
     size: ['11"', '14"'],
     color: [
