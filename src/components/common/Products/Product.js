@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsSearch } from 'react-icons/bs';
+import { AiOutlineEye } from 'react-icons/ai';
 import { FiHeart, FiShoppingBag } from 'react-icons/fi';
 import styled from 'styled-components';
 import { Button } from '../../../styles/GlobalStyles';
@@ -9,7 +9,7 @@ export default function Product(props) {
   return (
     <ProductCart>
       <ProductImage>
-        {props.off > 0 && <span>-{props.off}%</span>}
+        {props.discount > 0 && <span>-{props.discount}%</span>}
         <ShopButton className="product__image">
           <Button title="Add to cart">
             <FiShoppingBag />
@@ -18,19 +18,19 @@ export default function Product(props) {
             <FiHeart />
           </Button>
           <Button title="Quick view">
-            <BsSearch />
+            <AiOutlineEye />
           </Button>
         </ShopButton>
-        <img src={props.image[0]} alt={props.title} />
+        <img src={props.image[0]} alt={props.name} />
       </ProductImage>
       <ProductCartDetails>
-        <h6>{props.title}</h6>
-        <Review review={props.review} reviewQuantity={props.reviewQuantity} />
+        <h6>{props.name}</h6>
+        <Review review={props.review} reviewQuantity={props.reviewCount} />
         <h4>
           <ins>
-            ${(props.price - (props.off / 100) * props.price).toFixed(2)}
+            ${(props.price - (props.discount / 100) * props.price).toFixed(2)}
           </ins>
-          {props.off > 0 && <span>${props.price}</span>}
+          {props.discount > 0 && <span>${props.price}</span>}
         </h4>
       </ProductCartDetails>
     </ProductCart>
@@ -49,17 +49,13 @@ export const ProductCart = styled.article`
       display: block;
     }
   }
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    text-align: center;
-  }
 `;
 
 export const ProductImage = styled.div`
   position: relative;
   overflow: hidden;
+  height: 250px;
+  background-color: var(--light-gray);
   span {
     position: absolute;
     color: var(--light-gray);
@@ -68,6 +64,12 @@ export const ProductImage = styled.div`
     left: 15px;
     padding: 3px 6px;
     font-size: 14px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
   }
 `;
 
